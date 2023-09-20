@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Backgorund" style="background-image: url(&apos;project://database/Assets/02.%20Sprites/Image/Background.png?fileID=2800000&amp;guid=0114897e01d793f478dbfa56c9839adc&amp;type=3#Background&apos;); width: 1920px; height: 1080px;">
+        <ui:VisualElement name="Title" style="background-image: url(&apos;project://database/Assets/02.%20Sprites/Image/Today&apos;s%20dinner%20is%20Chicken.jpg?fileID=2800000&amp;guid=3efd9596bfae54249849002701147028&amp;type=3#Today&apos;s dinner is Chicken&apos;); width: 500px; height: 600px;" />
+    </ui:VisualElement>
+</ui:UXML>
