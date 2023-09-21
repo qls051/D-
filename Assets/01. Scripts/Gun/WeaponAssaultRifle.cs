@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class AmmoEvent : UnityEngine.Events.UnityEvent<int, int> { }
@@ -25,8 +26,15 @@ public class WeaponAssaultRifle : MonoBehaviour
     [Header("WeaponSetting")]
     [SerializeField] private WeaponSetting weaponSetting; // 무기 설정
 
+    [Header("Aim UI")]
+    [SerializeField] private Image imageAim; // 디폴트/에임 모드에 따라 에임 이미지 비활성/활성
+
     private float lastAttackTime = 0; // 마지막 발사 체크용
     private bool isReload = false; // 재장전 중인지 체크
+    private bool isAttack = false; // 공격 여부 체크용
+    private bool isModeChange = false; // 모드 전환 여부 체크용
+    private float defaultModeFOV = 60; // 기본모드에서의 카메라 FOV
+    private float aimMoveFOV = 40; // Aim모드에서의 카메라 FOV
 
     [Header("Fire Effects")]
     [SerializeField] private GameObject muzzleFlashEffect; // 총구 이펙트 on/off
@@ -63,16 +71,20 @@ public class WeaponAssaultRifle : MonoBehaviour
         muzzleFlashEffect.SetActive(false); // 총구 이펙트 비활성화
         onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo); // 무기가 활성화 될 때 해당 무기의 탄수 정보 갱신
         onMagazineEvent.Invoke(weaponSetting.curretMagazine); // 무기가 활성화 될 떄 해당 무기의 탄창 정보 갱신 
+        ResetVariables();
     }
 
     public void StartWeaponAction(int type = 0)
     {
         if (isReload == true) return; // 재장전 중일 때는 무기 액션 불가능 
 
+        if (isModeChange == true) return; // 모드 전환 중이면 무기 액션을 할 수 없다
+
         if (type == 0) // 마우스 좌클릭 공격 시작
         {
             if (weaponSetting.isAutomaticAttack == true) // 연속 공격
             {
+                isAttack = true;
                 StartCoroutine("OnAttackLoop");
             }
             else // 단발 공격
@@ -80,12 +92,20 @@ public class WeaponAssaultRifle : MonoBehaviour
                 OnAttack();
             }
         }
+        // 마우스 오른쪽 클릭 (모드 전환)
+        else
+        {
+            if (isAttack == true) return; // 공격 중일 때는 모드 전환 불가능
+
+            StartCoroutine("OnModeChange");
+        }
     }
 
     public void StopWeaponAction(int type = 0)
     {
         if (type == 0) // 마우스 우클릭 공격 종료
         {
+            isAttack = false;
             StopCoroutine("OnAttackLoop");
         }
     }
@@ -129,8 +149,11 @@ public class WeaponAssaultRifle : MonoBehaviour
             weaponSetting.currentAmmo--; // 공격시 1씩 감소, 탄수 UI 업데이트
             onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
 
-            animator.Play("Fire", -1, 0); // 무기 애니메이션
-            StartCoroutine("OnmuzzelFlashEffect"); // 총구 이펙트 재생
+            // 무기 애니메이션 재생 (모드에 따라 AimFire or Fire 애니메이션 재생)
+            //animator.Play("Fire", -1, 0); // 무기 애니메이션
+            string animation = animator.AimModeIs == true ? "AimFire" : "Fire";
+            animator.Play(animation, -1, 0);            
+            if(animator.AimModeIs == false) StartCoroutine("OnmuzzelFlashEffect"); // 총구 이펙트 재생
             PlayerSound(audioClipFire); // 공격 사운드
             casingMemoryPool.SpawnCasing(casingSpawnPoint.position, transform.right); // 탄피 생성
             TwoStepRaycast(); // 광선을 발사해 원하는 위치 공격(+Impact Effact)
@@ -173,6 +196,40 @@ public class WeaponAssaultRifle : MonoBehaviour
         Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
     }
 
+    private IEnumerator OnModeChange()
+    {
+        float current = 0;
+        float percent = 0;
+        float time = 0.35f;
+
+        animator.AimModeIs = !animator.AimModeIs;
+        imageAim.enabled = !imageAim.enabled;
+
+        float start = mainCamara.fieldOfView;
+        float end = animator.AimModeIs == true ? aimMoveFOV : defaultModeFOV;
+
+        isModeChange = true;
+
+        while(percent < 1)
+        {
+            current += Time.deltaTime;
+            percent = current / time;
+
+            //mode에 따라 카메라의 시야각을 변경
+            mainCamara.fieldOfView = Mathf.Lerp(start, end, percent);
+
+            yield return null;
+        }
+
+        isModeChange = false;
+    }
+
+    private void ResetVariables()
+    {
+        isReload = false;
+        isAttack = false;
+        isModeChange = false;
+    }
     private IEnumerator OnReload()
     {
         isReload = true;
