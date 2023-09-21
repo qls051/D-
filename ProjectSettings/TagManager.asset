@@ -8,6 +8,8 @@ TagManager:
   - FxTemporaire
   - Metal
   - ExplosiveBarrel
+  - ImpactNormal
+  - ImpactObstacle
   layers:
   - Default
   - TransparentFX

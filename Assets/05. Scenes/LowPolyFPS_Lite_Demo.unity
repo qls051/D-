@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14852584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14852585}
+  - component: {fileID: 14852586}
+  m_Layer: 5
+  m_Name: PanelMainMagazine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &14852585
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14852584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1497195122}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 0, y: 20}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &14852586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14852584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 10, y: 30}
+  m_Spacing: {x: 10, y: 0}
+  m_Constraint: 2
+  m_ConstraintCount: 1
 --- !u!1001 &21061384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -198,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_Name
       value: Wall_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 9051960803295690142, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_RootOrder
@@ -310,6 +379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -335,6 +408,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -513,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -714,6 +795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -775,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -835,6 +924,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -907,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -928,6 +1025,10 @@ PrefabInstance:
     - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_Name
       value: WoodPlank_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 7823069418110556476, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_RootOrder
@@ -1055,6 +1156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6094950207118815355, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1147,6 +1252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -1212,6 +1321,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -1319,6 +1432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1344,6 +1461,10 @@ PrefabInstance:
     - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_Name
       value: WoodPlank_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
@@ -1408,6 +1529,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
   m_PrefabInstance: {fileID: 276105748}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &276539102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276539103}
+  m_Layer: 6
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &276539103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276539102}
+  m_LocalRotation: {x: -0.28401542, y: 0, z: 0, w: 0.95881975}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1491968932}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -33, y: 0, z: 0}
 --- !u!4 &295445643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9051960803295690142, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
@@ -1575,6 +1727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1641,6 +1797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1706,6 +1866,10 @@ PrefabInstance:
     - target: {fileID: 5679093372342578863, guid: fd8212a6b4413da43bfbf816034a6a69, type: 3}
       propertyPath: m_Name
       value: Brick_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679093372342578863, guid: fd8212a6b4413da43bfbf816034a6a69, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 6183667849164132218, guid: fd8212a6b4413da43bfbf816034a6a69, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1865,6 +2029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1953,6 +2121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6094950207118815355, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1975,7 +2147,7 @@ GameObject:
   - component: {fileID: 421030748}
   m_Layer: 0
   m_Name: Map
-  m_TagString: Untagged
+  m_TagString: ImpactNormal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,6 +2225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2079,6 +2255,10 @@ PrefabInstance:
     - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_Name
       value: Stairs_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 717916840937405016, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_RootOrder
@@ -2185,6 +2365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2211,6 +2395,10 @@ PrefabInstance:
     - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_Name
       value: Wall_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 942386865516021016, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_RootOrder
@@ -2294,6 +2482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPlank_03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -2365,6 +2557,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1089633521}
+    - target: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 276539103}
+    - target: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: weaponSetting.maxMagazine
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1311290861401530, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
       propertyPath: m_Name
       value: Chicken
@@ -2470,6 +2670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2530,6 +2734,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2597,6 +2805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2622,6 +2834,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -3108,6 +3324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &671975562 stripped
@@ -3182,6 +3402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_05 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8687562865130882039, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
 --- !u!4 &706488850 stripped
@@ -3249,6 +3473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3315,6 +3543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3375,6 +3607,10 @@ PrefabInstance:
     - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Name
       value: Building_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3442,6 +3678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3506,6 +3746,10 @@ PrefabInstance:
     - target: {fileID: 6650620044663527590, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
       propertyPath: m_Name
       value: Wall_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650620044663527590, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
@@ -3711,6 +3955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_05 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8687562865130882039, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
 --- !u!4 &826756287 stripped
@@ -3772,6 +4020,10 @@ PrefabInstance:
     - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Name
       value: WallPart_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3859,6 +4111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8687562865130882039, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
 --- !u!4 &845892050 stripped
@@ -3929,6 +4185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4316400104262123815, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
 --- !u!4 &851042124 stripped
@@ -3950,6 +4210,10 @@ PrefabInstance:
     - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_Name
       value: Wall_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 9051960803295690142, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_RootOrder
@@ -4064,6 +4328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6094950207118815355, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4084,6 +4352,10 @@ PrefabInstance:
     - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_Name
       value: WoodPlank_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
@@ -4190,6 +4462,10 @@ PrefabInstance:
     - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Name
       value: WallPart_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4325,6 +4601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &892700725 stripped
@@ -4386,6 +4666,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4453,6 +4737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4478,6 +4766,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -4657,6 +4949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &934105895 stripped
@@ -4747,6 +5043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &957920914 stripped
@@ -4808,6 +5108,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4875,6 +5179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4936,6 +5244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4957,6 +5269,10 @@ PrefabInstance:
     - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_Name
       value: WoodPlank_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 7823069418110556476, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_RootOrder
@@ -5036,7 +5352,7 @@ GameObject:
   - component: {fileID: 993516922}
   m_Layer: 0
   m_Name: BG
-  m_TagString: Untagged
+  m_TagString: ImpactNormal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5219,6 +5535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5239,6 +5559,10 @@ PrefabInstance:
     - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_Name
       value: WoodPlank_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
@@ -5305,6 +5629,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -5439,6 +5767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5469,6 +5801,10 @@ PrefabInstance:
     - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_Name
       value: Wall_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562704949031642916, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 9051960803295690142, guid: 06e40c0b4555acb4eadd88bfaeffe3e9, type: 3}
       propertyPath: m_RootOrder
@@ -5531,6 +5867,10 @@ PrefabInstance:
     - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_Name
       value: WoodPlank_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 7823069418110556476, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_RootOrder
@@ -5640,7 +5980,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1088107343
 PrefabInstance:
@@ -5656,6 +5996,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -5750,7 +6094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1c3acf12f1f894aa4c28fcc03110bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotCamXAxisSpeed: 3
+  rotCamXAxisSpeed: 2
   rotCamYAxisSpeed: 2
 --- !u!114 &1089633521
 MonoBehaviour:
@@ -5884,15 +6228,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089633519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.02}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000091552734, y: 1, z: 0.019999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 824835579}
   - {fileID: 412248583}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1089633525
 MonoBehaviour:
@@ -6044,6 +6388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &1091825914 stripped
@@ -6111,6 +6459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6131,6 +6483,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -6241,6 +6597,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6409,6 +6769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6650620044663527590, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
 --- !u!1 &1147954907
@@ -6476,7 +6840,7 @@ GameObject:
   - component: {fileID: 1150116141}
   - component: {fileID: 1150116140}
   m_Layer: 5
-  m_Name: CrossHair
+  m_Name: ImageAim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6595,6 +6959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6708,6 +7076,10 @@ PrefabInstance:
     - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_Name
       value: WoodPlank_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483558178089845638, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 7823069418110556476, guid: 8ec4006999a806c4291e661db75cac17, type: 3}
       propertyPath: m_RootOrder
@@ -6836,6 +7208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4316400104262123815, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
 --- !u!4 &1217002154 stripped
@@ -6862,6 +7238,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -6981,6 +7361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7052,6 +7436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7117,6 +7505,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7201,6 +7593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_05 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8687562865130882039, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
 --- !u!4 &1323189212 stripped
@@ -7222,6 +7618,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -7287,6 +7687,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -7400,6 +7804,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7571,6 +7979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6094950207118815355, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7670,12 +8082,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_06 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8962307991406576125, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
 --- !u!4 &1487762466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8587048437761923911, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
   m_PrefabInstance: {fileID: 1487762465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1491968932 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 194375824, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+  m_PrefabInstance: {fileID: 582994844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1494787850
 PrefabInstance:
@@ -7732,6 +8153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7769,6 +8194,7 @@ RectTransform:
   - {fileID: 1895275319}
   - {fileID: 2043020081}
   - {fileID: 655960820}
+  - {fileID: 14852585}
   m_Father: {fileID: 1707276918}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7791,6 +8217,10 @@ PrefabInstance:
     - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_Name
       value: WoodPlank_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
@@ -7903,6 +8333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7944,6 +8378,8 @@ MonoBehaviour:
   spriteWeaponIcons:
   - {fileID: 21300044, guid: 5acb27b603af6d44ea6113c4b7b15385, type: 3}
   textAmmo: {fileID: 655960818}
+  magazineUIPrefab: {fileID: 3251849094611264401, guid: 8bcf0ec3678c0ee4d82794783125fa02, type: 3}
+  magazineParent: {fileID: 14852585}
 --- !u!4 &1535625459
 Transform:
   m_ObjectHideFlags: 0
@@ -8014,6 +8450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5418299342752462037, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5778495434235417856, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8039,6 +8479,10 @@ PrefabInstance:
     - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_Name
       value: WoodPlank_03 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369870585669708011, guid: a5eb9200176bece4791f121120fced60, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1749950437431784017, guid: a5eb9200176bece4791f121120fced60, type: 3}
       propertyPath: m_RootOrder
@@ -8100,6 +8544,10 @@ PrefabInstance:
     - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_Name
       value: Stairs_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 717916840937405016, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_RootOrder
@@ -8170,6 +8618,10 @@ PrefabInstance:
     - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_Name
       value: Jug_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
@@ -8276,6 +8728,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8424,6 +8880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 717916840937405016, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -8562,6 +9022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 717916840937405016, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_RootOrder
       value: 80
@@ -8667,6 +9131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8733,6 +9201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8749,6 +9221,10 @@ PrefabInstance:
     - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_Name
       value: Wall_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 942386865516021016, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_RootOrder
@@ -8971,6 +9447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9035,6 +9515,10 @@ PrefabInstance:
     - target: {fileID: 6650620044663527590, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
       propertyPath: m_Name
       value: Wall_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650620044663527590, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af11b45e3d568f946be2cdb52ca3f1c0, type: 3}
@@ -9110,6 +9594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_05
       objectReference: {fileID: 0}
+    - target: {fileID: 8687562865130882039, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb81a67ad1cf2984784527d333cae7d2, type: 3}
 --- !u!4 &1753418772 stripped
@@ -9172,6 +9660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9197,6 +9689,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -9304,6 +9800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9375,6 +9875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPart_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9440,6 +9944,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9510,6 +10018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_03
       objectReference: {fileID: 0}
+    - target: {fileID: 4316400104262123815, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
 --- !u!4 &1806180353 stripped
@@ -9572,6 +10084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9592,6 +10108,10 @@ PrefabInstance:
     - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_Name
       value: WoodPlank_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367816243053062410, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 1851160921559249840, guid: 3d4998389175ab44ea4d4fc6a1c102cd, type: 3}
       propertyPath: m_RootOrder
@@ -9653,6 +10173,10 @@ PrefabInstance:
     - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_Name
       value: Stairs_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 197416473921609954, guid: e059938ac4b575643a3345b530869d15, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 717916840937405016, guid: e059938ac4b575643a3345b530869d15, type: 3}
       propertyPath: m_RootOrder
@@ -9773,6 +10297,10 @@ PrefabInstance:
     - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Name
       value: WallPart_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 6023726615088613031, guid: 30c819560420f824da028f3502f83728, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10024,6 +10552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10034,6 +10566,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4764293196696219720, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
   m_PrefabInstance: {fileID: 1905640165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1912448470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 349401319, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+  m_PrefabInstance: {fileID: 582994844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1966870427
 PrefabInstance:
@@ -10101,6 +10638,10 @@ PrefabInstance:
     - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Name
       value: Jug_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734595923484152238, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 6094950207118815355, guid: db39c55cba61f5f4886de5e25b22fac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10171,6 +10712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4316400104262123815, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c251c4f6ea3694285b311cea75f2a2, type: 3}
 --- !u!4 &1978355518 stripped
@@ -10232,6 +10777,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10299,6 +10848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10315,6 +10868,10 @@ PrefabInstance:
     - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_Name
       value: Wall_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 942386865516021016, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_RootOrder
@@ -10388,12 +10945,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
   m_PrefabInstance: {fileID: 582994844}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1912448470}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fb2291082e75e647a658909402c859b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1994804828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912448470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e112bee7e3c724b9e8dfff2fdd101a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactPrefab:
+  - {fileID: 7012805532763948151, guid: e3d615d309d8fb543bebe1cfd7eab39f, type: 3}
+  - {fileID: 7012805532763948151, guid: 615513fc9c592fd4a8c7f9e6de047f94, type: 3}
 --- !u!1001 &1996089548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10448,6 +11020,10 @@ PrefabInstance:
     - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Name
       value: Box_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 5932656567344991015, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10774,6 +11350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3956864845004347026, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 4441194852809919528, guid: 5c6a1648d6f5d8b45997037cbb0ea5ff, type: 3}
       propertyPath: m_RootOrder
       value: 112
@@ -10857,6 +11437,10 @@ PrefabInstance:
     - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_Name
       value: Wall_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 459322566853779362, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
+      propertyPath: m_TagString
+      value: ImpactNormal
       objectReference: {fileID: 0}
     - target: {fileID: 942386865516021016, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
       propertyPath: m_RootOrder
