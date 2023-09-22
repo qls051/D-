@@ -23,7 +23,7 @@ public class PlayerAnimatorController : MonoBehaviour
     }
 
     public bool AimModeIs
-    {
+    { 
         set => animator.SetBool("isAimMode", value);
         get => animator.GetBool("isAimMode");
     }

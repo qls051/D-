@@ -2049,11 +2049,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4764293196696219720, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
   m_PrefabInstance: {fileID: 1016090953}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &402771260 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 402771260, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
-  m_PrefabInstance: {fileID: 582994844}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &405575506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2555,6 +2550,34 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 349401313, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 349498567, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
@@ -3808,7 +3831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958f24793d964c846ac01fda9fa06a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 402771260}
 --- !u!114 &824835576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3821,9 +3843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd50d942bf3e9740bbcf3c08dd2a5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 300
-  mx: 0
-  my: 0
 --- !u!81 &824835577
 AudioListener:
   m_ObjectHideFlags: 0
