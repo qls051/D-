@@ -200,7 +200,8 @@ public class WeaponAssaultRifle : MonoBehaviour
     {
         float current = 0;
         float percent = 0;
-        float time = 0.35f;
+        //float time = 0.35f;
+        float time = 0.2f;
 
         animator.AimModeIs = !animator.AimModeIs;
         imageAim.enabled = !imageAim.enabled;
