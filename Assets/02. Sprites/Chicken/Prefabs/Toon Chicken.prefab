@@ -1399,18 +1399,25 @@ MonoBehaviour:
   onAmmoEvent:
     m_PersistentCalls:
       m_Calls: []
+  onMagazineEvent:
+    m_PersistentCalls:
+      m_Calls: []
   audioClipTakeOutWeapon: {fileID: 8300000, guid: 2ae41e984ff1f3e4a840a1a46b6a8816, type: 3}
   audioClipFire: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
   audioClipReload: {fileID: 8300000, guid: 5b907074256e36d41b92e89fb0790633, type: 3}
   weaponSetting:
     weaponName: 0
+    curretMagazine: 0
+    maxMagazine: 0
     currentAmmo: 0
     maxAmmo: 30
     attackRate: 0.1
     attackDistance: 30
     isAutomaticAttack: 1
+  imageAim: {fileID: 0}
   muzzleFlashEffect: {fileID: 1788353133}
   casingSpawnPoint: {fileID: 1757754865}
+  bulletSpawnPoint: {fileID: 0}
 --- !u!114 &1994804826
 MonoBehaviour:
   m_ObjectHideFlags: 0
