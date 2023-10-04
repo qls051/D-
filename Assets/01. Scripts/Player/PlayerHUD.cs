@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Net.NetworkInformation;
+
 public class PlayerHUD : MonoBehaviour
 {
     [Header("Componets")]
     [SerializeField] private WeaponAssaultRifle wepon; // 현재 정보가 출력되는 무기
+    [SerializeField] private Status status; // 플레이어의 상태 (이동속도, 체력)
 
     [Header("Weapon Base")]
     [SerializeField] private TextMeshProUGUI textWeaponName; // 무기 이름
@@ -22,6 +25,13 @@ public class PlayerHUD : MonoBehaviour
 
     private List<GameObject> magazineList; // 탄창 UI 리스트
 
+    [Header("HP & BloodScreen UI")]
+    //[SerializeField] private TextMeshProUGUI textHp; // 플레이어 체력 출력 text 
+    [SerializeField] private Image circleHP; // 이미지 hp 에러 나면 얘네 지우고 위에 textHp 쓰면 됨
+    [SerializeField] private Text hpText; // 이미지 hp 
+    [SerializeField] private Image imageBloodScreen; // 플레이어가 공격받았을 때 화면에 표시되는 Image
+    [SerializeField] private AnimationCurve curveBloodScreen;
+
     private void Awake()
     {
         SetupWeapon();
@@ -29,7 +39,18 @@ public class PlayerHUD : MonoBehaviour
 
         wepon.onAmmoEvent.AddListener(UpdateammoHUD);
         wepon.onMagazineEvent.AddListener(UpdateMagazineHUD);
+        status.onHPEvent.AddListener(UpdateammoHUD);
     }
+
+    private void Update() // 이미지 hp를 위한 것 
+    {
+        //UpdateHPText();
+    }
+
+    /*private void UpdateHPText() // 이미지 hp를 위한 것 
+    {
+        hpText.text = currentHP.ToString(); // 현재 HP 값을 텍스트로 표시
+    }*/
 
     private void SetupWeapon()
     {
@@ -40,6 +61,40 @@ public class PlayerHUD : MonoBehaviour
     private void UpdateammoHUD(int curretAmmo, int maxAmmo)
     {
         textAmmo.text = $"<size=40>{curretAmmo}/</size>{maxAmmo}";
+    }
+
+    private void UpdateHUD(int pervious, int current)
+    {
+        //textHp.text = "HP " + current;
+
+        /*currentHp -= current;
+        currentHp = Mathf.Clamp(currentHp, 0, maxHP); // 최소값 0, 최대값 maxHP로 제한
+        circleHP.fillAmount = (float)currentHp / (float)maxHP;
+        UpdateHPText();*/ // 이미지 hp
+
+        if (pervious - current > 0)
+        {
+            StopCoroutine("OnBloodScreen");
+            StartCoroutine("OnBloodScreen");
+            //StopCoroutine(OnBloodScreen());
+            //StartCoroutine(OnBloodScreen());
+        }
+    }
+
+    private IEnumerator OnBloodScreen()
+    {
+        float percent = 0;
+
+        while (percent < 1)
+        {
+            percent += Time.deltaTime;
+
+            Color color = imageBloodScreen.color;
+            color.a = Mathf.Lerp(1, 0, curveBloodScreen.Evaluate(percent));
+            imageBloodScreen.color = color;
+
+            yield return null;  
+        }
     }
 
     private void SetUPMagazine()
