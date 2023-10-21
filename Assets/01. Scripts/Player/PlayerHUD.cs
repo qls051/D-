@@ -21,14 +21,12 @@ public class PlayerHUD : MonoBehaviour
 
     [Header("Magazine")]
     [SerializeField] private GameObject magazineUIPrefab; // 탄창 UI 프리펩
-    [SerializeField] private Transform magazineParent; // 탄창 Ui가 배치되는 패널
+    [SerializeField] private Transform magazineParent; // 탄창 UI가 배치되는 패널
 
     private List<GameObject> magazineList; // 탄창 UI 리스트
 
     [Header("HP & BloodScreen UI")]
-    //[SerializeField] private TextMeshProUGUI textHp; // 플레이어 체력 출력 text 
-    [SerializeField] private Image circleHP; // 이미지 hp 에러 나면 얘네 지우고 위에 textHp 쓰면 됨
-    [SerializeField] private Text hpText; // 이미지 hp 
+    [SerializeField] private TextMeshProUGUI textHp; // 플레이어 체력 출력 text 
     [SerializeField] private Image imageBloodScreen; // 플레이어가 공격받았을 때 화면에 표시되는 Image
     [SerializeField] private AnimationCurve curveBloodScreen;
 
@@ -39,18 +37,8 @@ public class PlayerHUD : MonoBehaviour
 
         wepon.onAmmoEvent.AddListener(UpdateammoHUD);
         wepon.onMagazineEvent.AddListener(UpdateMagazineHUD);
-        status.onHPEvent.AddListener(UpdateammoHUD);
-    }
-
-    private void Update() // 이미지 hp를 위한 것 
-    {
-        //UpdateHPText();
-    }
-
-    /*private void UpdateHPText() // 이미지 hp를 위한 것 
-    {
-        hpText.text = currentHP.ToString(); // 현재 HP 값을 텍스트로 표시
-    }*/
+        status.onHPEvent.AddListener(UpdateHPHUD);
+    } 
 
     private void SetupWeapon()
     {
@@ -63,21 +51,17 @@ public class PlayerHUD : MonoBehaviour
         textAmmo.text = $"<size=40>{curretAmmo}/</size>{maxAmmo}";
     }
 
-    private void UpdateHUD(int pervious, int current)
+    private void UpdateHPHUD(int pervious, int current)
     {
-        //textHp.text = "HP " + current;
+        textHp.text = "HP " + current;
 
-        /*currentHp -= current;
-        currentHp = Mathf.Clamp(currentHp, 0, maxHP); // 최소값 0, 최대값 maxHP로 제한
-        circleHP.fillAmount = (float)currentHp / (float)maxHP;
-        UpdateHPText();*/ // 이미지 hp
+        // 체력이 증가했을 땐 화면에 빨간색 이미지를 출력하지 않도록  return
+        if (pervious <= current) return;
 
         if (pervious - current > 0)
         {
-            StopCoroutine("OnBloodScreen");
-            StartCoroutine("OnBloodScreen");
-            //StopCoroutine(OnBloodScreen());
-            //StartCoroutine(OnBloodScreen());
+            //StopCoroutine("OnBloodScreen");
+            //StartCoroutine("OnBloodScreen");
         }
     }
 

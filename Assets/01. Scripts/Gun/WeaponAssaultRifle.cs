@@ -192,6 +192,15 @@ public class WeaponAssaultRifle : MonoBehaviour
         if(Physics.Raycast(bulletSpawnPoint.position, attackDirection, out hit, weaponSetting.attackDistance))
         {
             impactMemoryPool.SpawnImpact(hit);
+
+            if(hit.transform.CompareTag("ImpactEnemy"))
+            {
+                hit.transform.GetComponent<EnemyFSM>().TakeDamage(weaponSetting.damage);
+            }
+            else if (hit.transform.CompareTag("InteractionObject"))
+            {
+                hit.transform.GetComponent<InteractionObject>().TakeDamage(weaponSetting.damage);
+            }
         }
         Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
     }
@@ -266,5 +275,11 @@ public class WeaponAssaultRifle : MonoBehaviour
         audioSource.Stop();       // 기존에 재생중인 사운드를 정지하고, 
         audioSource.clip = clip;  // 새로운 사운드 clip로 교채 후
         audioSource.Play();       // 사운드 재생 
+    }
+
+    public void IncreaseMagazine(int magazine)
+    {
+        weaponSetting.curretMagazine = CurrentMagazine + magazine > MaxMagazine ? MaxMagazine : CurrentMagazine + magazine;
+        onMagazineEvent.Invoke(CurrentMagazine);
     }
 }
