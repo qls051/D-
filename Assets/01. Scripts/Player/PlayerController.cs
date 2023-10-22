@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode keyCodeReload = KeyCode.R; // 재장전 키
 
     //public float Movespeed = 7f;
-    private PlayerAnimatorController animator;
     private AudioSource audioSource;
     private WeaponAssaultRifle weapon; // 무기를 이용한 공격 제어
 
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
         rotateToMouse = GetComponent<RotateToMouse>();
         movement= GetComponent<MovementCharacterController>();
-        animator = GetComponent<PlayerAnimatorController>();
         audioSource = GetComponent<AudioSource>();
         weapon = GetComponentInChildren<WeaponAssaultRifle>();
         status = GetComponent<Status>();
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour
             if (z > 0) isRun = Input.GetKey(keyCodeRun);
 
             movement.MoveSpeed = isRun == true ? status.RunSpeed : status.WalkSpeed;
-            animator.MoveSpped = isRun == true ? 1 : 0.5f;
+            weapon.Animator.MoveSpped = isRun == true ? 1 : 0.5f;
             audioSource.clip = isRun == true ? audioClipRun : audioClipWalk;
 
             if(audioSource.isPlaying == false)
@@ -78,7 +76,7 @@ public class PlayerController : MonoBehaviour
         else // 제자리에 멈췄을 때
         {
             movement.MoveSpeed = 0;
-            animator.MoveSpped = 0;
+            weapon.Animator.MoveSpped = 0;
             
             if(audioSource.isPlaying == true)
             {
