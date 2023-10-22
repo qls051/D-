@@ -5,33 +5,17 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class AmmoEvent : UnityEngine.Events.UnityEvent<int, int> { }
-
-[System.Serializable]
-public class MagazineEvent : UnityEngine.Events.UnityEvent<int> { }
-public class WeaponAssaultRifle : MonoBehaviour
+public class WeaponAssaultRifle : WeaponBase
 {
-    [HideInInspector]
-    public AmmoEvent onAmmoEvent = new AmmoEvent();
-    [HideInInspector]
-    public MagazineEvent onMagazineEvent = new MagazineEvent();
-
     [Header("Audio Clips")]
     [SerializeField]
     private AudioClip audioClipTakeOutWeapon;  // 무기 장착 사운드
     [SerializeField] private AudioClip audioClipFire; // 공격 사운드
     [SerializeField] private AudioClip audioClipReload; // 재장전 사운드
 
-    [Header("WeaponSetting")]
-    [SerializeField] private WeaponSetting weaponSetting; // 무기 설정
-
     [Header("Aim UI")]
     [SerializeField] private Image imageAim; // 디폴트/에임 모드에 따라 에임 이미지 비활성/활성
 
-    private float lastAttackTime = 0; // 마지막 발사 체크용
-    private bool isReload = false; // 재장전 중인지 체크
-    private bool isAttack = false; // 공격 여부 체크용
     private bool isModeChange = false; // 모드 전환 여부 체크용
     private float defaultModeFOV = 60; // 기본모드에서의 카메라 FOV
     private float aimMoveFOV = 40; // Aim모드에서의 카메라 FOV
@@ -43,16 +27,9 @@ public class WeaponAssaultRifle : MonoBehaviour
     [SerializeField] private Transform casingSpawnPoint; // 탄피 생성 위치
     [SerializeField] private Transform bulletSpawnPoint; // 총알 생성 위치
 
-    private AudioSource audioSource;
-    private PlayerAnimatorController animator;
     private CasingMemoryPool casingMemoryPool; // 탄피 생성 후 활성/비활성 관리
     private ImpactMemoryPool impactMemoryPool; // 공격 생성 후 활성/비활성 관리
     private Camera mainCamara; // 광선 발사
-
-    // 외부에서 필요한 정보를 열람하기 위해 정의한 get Property's
-    public WeaponName WeaponName => weaponSetting.weaponName;
-    public int CurrentMagazine => weaponSetting.curretMagazine;
-    public int MaxMagazine => weaponSetting.maxMagazine;
 
     private void Awake()
     {

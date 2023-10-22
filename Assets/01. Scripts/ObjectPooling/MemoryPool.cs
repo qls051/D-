@@ -23,6 +23,9 @@ public class MemoryPool
     public int MaxCount => maxCount;
     public int ActiveCount => activeCount;
 
+    // 오브젝트가 임시로 보관되는 위치
+    private Vector3 tempPosition = new Vector3(48, 1, 48);
+
     public MemoryPool(GameObject poolObject)
     {
         maxCount = 0;
@@ -44,6 +47,7 @@ public class MemoryPool
 
             poolItem.isActive = false;
             poolItem.gameObject = GameObject.Instantiate(poolObject);
+            poolItem.gameObject.transform.position = tempPosition;
             poolItem.gameObject.SetActive(false);
 
             poolItemList.Add(poolItem);
@@ -105,6 +109,7 @@ public class MemoryPool
             {
                 activeCount--;
 
+                poolItem.gameObject.transform.position = tempPosition;
                 poolItem.isActive = false;
                 poolItem.gameObject.SetActive(false);
 
@@ -124,6 +129,7 @@ public class MemoryPool
 
             if (poolItem.gameObject != null && poolItem.isActive == true)
             {
+                poolItem.gameObject.transform.position = tempPosition;
                 poolItem.isActive = false;
                 poolItem.gameObject.SetActive(false);
             }
