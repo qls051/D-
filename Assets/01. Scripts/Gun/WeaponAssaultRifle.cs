@@ -29,73 +29,44 @@ public class WeaponAssaultRifle : WeaponBase
 
     private CasingMemoryPool casingMemoryPool; // 탄피 생성 후 활성/비활성 관리
     private ImpactMemoryPool impactMemoryPool; // 공격 생성 후 활성/비활성 관리
-    private Camera mainCamara; // 광선 발사
+    private Camera mainCamara; // 광선 발사   
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        // 기반 클래스의 초기화를 위환 Setup() 메소드 호출
+        base.Setup();
+
         casingMemoryPool = GetComponent<CasingMemoryPool>();
-        animator = GetComponentInParent<PlayerAnimatorController>();
         impactMemoryPool = GetComponent<ImpactMemoryPool>();
         mainCamara = Camera.main;
 
-        weaponSetting.currentAmmo = weaponSetting.maxAmmo; // 처음 탄 수는 최대로 설정
         weaponSetting.curretMagazine = weaponSetting.maxMagazine; // 처음 탄창 수는 최대로 설정
+        weaponSetting.currentAmmo = weaponSetting.maxAmmo; // 처음 탄 수는 최대로 설정
     }
     private void OnEnable()
     {
-        PlayerSound(audioClipTakeOutWeapon); // 무기 장착 사운드 재생
+        //PlayerSound(audioClipTakeOutWeapon); // 무기 장착 사운드 재생
         muzzleFlashEffect.SetActive(false); // 총구 이펙트 비활성화
         onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo); // 무기가 활성화 될 때 해당 무기의 탄수 정보 갱신
         onMagazineEvent.Invoke(weaponSetting.curretMagazine); // 무기가 활성화 될 떄 해당 무기의 탄창 정보 갱신 
         ResetVariables();
     }
 
-    public void StartWeaponAction(int type = 0)
+    public override void StartWeaponAction(int type = 0)
     {
-        if (isReload == true) return; // 재장전 중일 때는 무기 액션 불가능 
-
-        if (isModeChange == true) return; // 모드 전환 중이면 무기 액션을 할 수 없다
-
-        if (type == 0) // 마우스 좌클릭 공격 시작
-        {
-            if (weaponSetting.isAutomaticAttack == true) // 연속 공격
-            {
-                isAttack = true;
-                StartCoroutine("OnAttackLoop");
-            }
-            else // 단발 공격
-            {
-                OnAttack();
-            }
-        }
-        // 마우스 오른쪽 클릭 (모드 전환)
-        else
-        {
-            if (isAttack == true) return; // 공격 중일 때는 모드 전환 불가능
-
-            StartCoroutine("OnModeChange");
-        }
+        throw new System.NotImplementedException();
     }
 
-    public void StopWeaponAction(int type = 0)
+    public override void StopWeaponAction(int type = 0)
     {
-        if (type == 0) // 마우스 우클릭 공격 종료
-        {
-            isAttack = false;
-            StopCoroutine("OnAttackLoop");
-        }
+        throw new System.NotImplementedException();
     }
 
-    public void StartReload()
+    public override void StartReload()
     {
-        Debug.Log(isReload);
-        if (isReload == true || weaponSetting.curretMagazine <= 0) return; // 재장전 중이거나 탄창 수가 0이면 재장전 불가능
-
-        StopWeaponAction(); // 무기 액션 도중에 R키 눌러서 재장전 시도하면 무기 액션 종료 후 장전
-
-        StartCoroutine("OnReload");
+        throw new System.NotImplementedException();
     }
+
 
     private IEnumerator OnAttackLoop()
     {
@@ -131,7 +102,7 @@ public class WeaponAssaultRifle : WeaponBase
             string animation = animator.AimModeIs == true ? "AimFire" : "Fire";
             animator.Play(animation, -1, 0);            
             if(animator.AimModeIs == false) StartCoroutine("OnmuzzelFlashEffect"); // 총구 이펙트 재생
-            PlayerSound(audioClipFire); // 공격 사운드
+            //PlayerSound(audioClipFire); // 공격 사운드
             casingMemoryPool.SpawnCasing(casingSpawnPoint.position, transform.right); // 탄피 생성
             TwoStepRaycast(); // 광선을 발사해 원하는 위치 공격(+Impact Effact)
         }
@@ -223,7 +194,7 @@ public class WeaponAssaultRifle : WeaponBase
 
         //재장전 애니메이션, 사운드 실행
         animator.OnReload();
-        PlayerSound(audioClipReload);
+        //PlayerSound(audioClipReload);
 
         while (true)
         {
@@ -245,13 +216,6 @@ public class WeaponAssaultRifle : WeaponBase
 
             yield return null;
         }
-    }
-
-    private void PlayerSound(AudioClip clip)
-    {
-        audioSource.Stop();       // 기존에 재생중인 사운드를 정지하고, 
-        audioSource.clip = clip;  // 새로운 사운드 clip로 교채 후
-        audioSource.Play();       // 사운드 재생 
     }
 
     public void IncreaseMagazine(int magazine)
