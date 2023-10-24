@@ -24,7 +24,8 @@ public class MemoryPool
     public int ActiveCount => activeCount;
 
     // 오브젝트가 임시로 보관되는 위치
-    private Vector3 tempPosition = new Vector3(48, 1, 48);
+    //private Vector3 tempPosition = new Vector3(48, 1, 48);
+    private Vector3 tempPosition = new Vector3(4, 1, 4);
 
     public MemoryPool(GameObject poolObject)
     {

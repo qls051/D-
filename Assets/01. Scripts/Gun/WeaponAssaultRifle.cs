@@ -90,7 +90,7 @@ public class WeaponAssaultRifle : WeaponBase
 
             StartCoroutine("OnModeChange");
         }
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
     public override void StopWeaponAction(int type = 0)
     {
@@ -99,7 +99,7 @@ public class WeaponAssaultRifle : WeaponBase
             isAttack = false;
             StopCoroutine("OnAttackLoop");
         }
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public override void StartReload()
@@ -110,7 +110,7 @@ public class WeaponAssaultRifle : WeaponBase
         StopWeaponAction(); // 무기 액션 도중에 R키 눌러서 재장전 시도하면 무기 액션 종료 후 장전
 
         StartCoroutine("OnReload");
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
 
@@ -264,6 +264,8 @@ public class WeaponAssaultRifle : WeaponBase
             yield return null;
         }
     }
+
+    
 
     public void IncreaseMagazine(int magazine)
     {
