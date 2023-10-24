@@ -51,7 +51,7 @@ public class WeaponAssaultRifle : WeaponBase
         ResetVariables();
     }
 
-    public override void StartWeaponAction(int type = 0)
+    /*public override void StartWeaponAction(int type = 0)
     {
         throw new System.NotImplementedException();
     }
@@ -64,7 +64,55 @@ public class WeaponAssaultRifle : WeaponBase
     public override void StartReload()
     {
         throw new System.NotImplementedException();
+    }*/
+    public override void StartWeaponAction(int type = 0)
+    {
+        if (isReload == true) return; // 재장전 중일 때는 무기 액션 불가능 
+
+        if (isModeChange == true) return; // 모드 전환 중이면 무기 액션을 할 수 없다
+
+        if (type == 0) // 마우스 좌클릭 공격 시작
+        {
+            if (weaponSetting.isAutomaticAttack == true) // 연속 공격
+            {
+                isAttack = true;
+                StartCoroutine("OnAttackLoop");
+            }
+            else // 단발 공격
+            {
+                OnAttack();
+            }
+        }
+        // 마우스 오른쪽 클릭 (모드 전환)
+        else
+        {
+            if (isAttack == true) return; // 공격 중일 때는 모드 전환 불가능
+
+            StartCoroutine("OnModeChange");
+        }
+        throw new System.NotImplementedException();
     }
+    public override void StopWeaponAction(int type = 0)
+    {
+        if (type == 0) // 마우스 우클릭 공격 종료
+        {
+            isAttack = false;
+            StopCoroutine("OnAttackLoop");
+        }
+        throw new System.NotImplementedException();
+    }
+
+    public override void StartReload()
+    {
+        Debug.Log(isReload);
+        if (isReload == true || weaponSetting.curretMagazine <= 0) return; // 재장전 중이거나 탄창 수가 0이면 재장전 불가능
+
+        StopWeaponAction(); // 무기 액션 도중에 R키 눌러서 재장전 시도하면 무기 액션 종료 후 장전
+
+        StartCoroutine("OnReload");
+        throw new System.NotImplementedException();
+    }
+
 
 
     private IEnumerator OnAttackLoop()
