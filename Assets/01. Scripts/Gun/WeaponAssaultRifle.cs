@@ -8,8 +8,7 @@ using UnityEngine.UI;
 public class WeaponAssaultRifle : WeaponBase
 {
     [Header("Audio Clips")]
-    [SerializeField]
-    private AudioClip audioClipTakeOutWeapon;  // 무기 장착 사운드
+    [SerializeField] private AudioClip audioClipTakeOutWeapon;  // 무기 장착 사운드
     [SerializeField] private AudioClip audioClipFire; // 공격 사운드
     [SerializeField] private AudioClip audioClipReload; // 재장전 사운드
 

@@ -8,8 +8,8 @@ public class PlayerAnimatorController : MonoBehaviour
 
     private void Awake()
     {
-        animator = transform.Find("Chicken/arms_assault_rifle_01").GetComponent<Animator>();
-        //animator = GetComponentInChildren<Animator>();
+        //animator = transform.Find("Chicken/arms_assault_rifle_01").GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     public float MoveSpped
