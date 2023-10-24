@@ -44,7 +44,7 @@ public class WeaponAssaultRifle : WeaponBase
     }
     private void OnEnable()
     {
-        //PlayerSound(audioClipTakeOutWeapon); // 무기 장착 사운드 재생
+        PlaySound(audioClipTakeOutWeapon); // 무기 장착 사운드 재생
         muzzleFlashEffect.SetActive(false); // 총구 이펙트 비활성화
         onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo); // 무기가 활성화 될 때 해당 무기의 탄수 정보 갱신
         onMagazineEvent.Invoke(weaponSetting.curretMagazine); // 무기가 활성화 될 떄 해당 무기의 탄창 정보 갱신 
@@ -135,7 +135,7 @@ public class WeaponAssaultRifle : WeaponBase
             string animation = animator.AimModeIs == true ? "AimFire" : "Fire";
             animator.Play(animation, -1, 0);            
             if(animator.AimModeIs == false) StartCoroutine("OnmuzzelFlashEffect"); // 총구 이펙트 재생
-            //PlayerSound(audioClipFire); // 공격 사운드
+            PlaySound(audioClipFire); // 공격 사운드
             casingMemoryPool.SpawnCasing(casingSpawnPoint.position, transform.right); // 탄피 생성
             TwoStepRaycast(); // 광선을 발사해 원하는 위치 공격(+Impact Effact)
         }
@@ -227,7 +227,8 @@ public class WeaponAssaultRifle : WeaponBase
 
         //재장전 애니메이션, 사운드 실행
         animator.OnReload();
-        //PlayerSound(audioClipReload);
+        PlaySound(audioClipReload);
+        
 
         while (true)
         {
