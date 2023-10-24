@@ -51,20 +51,6 @@ public class WeaponAssaultRifle : WeaponBase
         ResetVariables();
     }
 
-    /*public override void StartWeaponAction(int type = 0)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void StopWeaponAction(int type = 0)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void StartReload()
-    {
-        throw new System.NotImplementedException();
-    }*/
     public override void StartWeaponAction(int type = 0)
     {
         if (isReload == true) return; // 재장전 중일 때는 무기 액션 불가능 
