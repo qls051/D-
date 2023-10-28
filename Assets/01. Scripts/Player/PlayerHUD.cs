@@ -37,6 +37,18 @@ public class PlayerHUD : MonoBehaviour
         status.onHPEvent.AddListener(UpdateHPHUD);
     } 
 
+    public void SetupAllWeapons(WeaponBase[] weapons)
+    {
+        SetUPMagazine();
+
+        // 사용 가능한 모든 무기의 이벤트 등록
+        for (int i = 0; i < weapons.Length; ++i)
+        {
+            weapons[i].onAmmoEvent.AddListener(UpdateammoHUD);
+            weapons[i].onMagazineEvent.AddListener(UpdateMagazineHUD);
+        }
+    }
+
     private void SetupWeapon()
     {
         textWeaponName.text = wepon.WeaponName.ToString();
