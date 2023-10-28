@@ -8,7 +8,7 @@ using System.Net.NetworkInformation;
 public class PlayerHUD : MonoBehaviour
 {
     [Header("Componets")]
-    private WeaponBase wepon; // 현재 정보가 출력되는 무기
+    private WeaponBase weapon; // 현재 정보가 출력되는 무기
     [SerializeField] private Status status; // 플레이어의 상태 (이동속도, 체력)
 
     [Header("Weapon Base")]
@@ -49,10 +49,18 @@ public class PlayerHUD : MonoBehaviour
         }
     }
 
+    public void SwitchingWeapon(WeaponBase newWeapon)
+    {
+        weapon = newWeapon;
+
+        SetupWeapon();
+
+    }
+
     private void SetupWeapon()
     {
-        textWeaponName.text = wepon.WeaponName.ToString();
-        imageWeaponIcon.sprite = spriteWeaponIcons[(int)wepon.WeaponName];
+        textWeaponName.text = weapon.WeaponName.ToString();
+        imageWeaponIcon.sprite = spriteWeaponIcons[(int)weapon.WeaponName];
     }
 
     private void UpdateammoHUD(int curretAmmo, int maxAmmo)
@@ -95,7 +103,7 @@ public class PlayerHUD : MonoBehaviour
         // weapon에 등록되어 있는 최대 탄창 개수만큼 Image Icon을 생성
         // magazineParent 오브젝트의 자식으로 등록 후 모두 비활성화/리스트에 저장
         magazineList = new List<GameObject>();
-        for (int i = 0; i < wepon.MaxMagazine; ++i)
+        for (int i = 0; i < weapon.MaxMagazine; ++i)
         {
             GameObject clone = Instantiate(magazineUIPrefab);
             clone.transform.SetParent(magazineParent);
@@ -105,7 +113,7 @@ public class PlayerHUD : MonoBehaviour
         }
 
         // wepon에 등록되어 있는 현재 탄창 개수만큼 오브젝트 활성화
-        for (int i = 0; i < wepon.CurrentMagazine; ++i)
+        for (int i = 0; i < weapon.CurrentMagazine; ++i)
         {
             magazineList[i].SetActive(true);
         }
