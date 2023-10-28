@@ -6509,6 +6509,7 @@ GameObject:
   - component: {fileID: 1089633526}
   - component: {fileID: 1089633525}
   - component: {fileID: 1089633527}
+  - component: {fileID: 1089633528}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -6715,6 +6716,25 @@ MonoBehaviour:
   walkSpeed: 5
   runSpeed: 7
   maxHP: 100
+--- !u!114 &1089633528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089633519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abff1909ef965d543a2a7fb29e5870cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1089633523}
+  playerHUD: {fileID: 1535625458}
+  weapons:
+  - {fileID: 1994804823}
+  - {fileID: 548373976}
+  - {fileID: 1130940926}
+  - {fileID: 2017239338}
 --- !u!1001 &1091825913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11858,6 +11878,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942386865516021016, guid: 12786b453b3a7cc4a815f43857ab7460, type: 3}
   m_PrefabInstance: {fileID: 1984119607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994804823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+  m_PrefabInstance: {fileID: 582994844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2291082e75e647a658909402c859b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1996089548
 PrefabInstance:
   m_ObjectHideFlags: 0
