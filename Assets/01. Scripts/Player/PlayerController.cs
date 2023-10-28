@@ -16,8 +16,7 @@ public class PlayerController : MonoBehaviour
 
     //public float Movespeed = 7f;
     private AudioSource audioSource;
-    private WeaponAssaultRifle weapon; // 무기를 이용한 공격 제어
-
+    private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
     private RotateToMouse rotateToMouse; // 마우스 이동으로 카메라 회전
     private MovementCharacterController movement; // 키보드 입력으로 플레이어 이동
     private Status status; // 이동속도 등 플레이어 정보
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
         rotateToMouse = GetComponent<RotateToMouse>();
         movement= GetComponent<MovementCharacterController>();
         audioSource = GetComponent<AudioSource>();
-        weapon = GetComponentInChildren<WeaponAssaultRifle>();
         status = GetComponent<Status>();
     }
 
@@ -129,6 +127,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game Over"); 
         }
+    }
+
+    public void SwitchingWeapon(WeaponBase newWeapon)
+    {
+        weapon = newWeapon;
     }
 }
  
