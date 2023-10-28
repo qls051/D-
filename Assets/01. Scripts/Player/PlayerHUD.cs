@@ -7,8 +7,8 @@ using System.Net.NetworkInformation;
 
 public class PlayerHUD : MonoBehaviour
 {
-    [Header("Componets")]
     private WeaponBase weapon; // 현재 정보가 출력되는 무기
+    [Header("Componets")]
     [SerializeField] private Status status; // 플레이어의 상태 (이동속도, 체력)
 
     [Header("Weapon Base")]
