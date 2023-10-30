@@ -63,7 +63,7 @@ public class WeaponRevolver : WeaponBase
     public override void StartReload()
     {
         // 현재 재장전 중이거나 탄창 수가 0이면 재장전 불가능
-        if (isReload = true || weaponSetting.curretMagazine <= 0) return;
+        if (isReload == true || weaponSetting.curretMagazine <= 0) return;
 
         // 무기 액션 도중에 R키를 눌러 재장전 시도하면 무기 액션 종료 후 재장전
         StopWeaponAction();

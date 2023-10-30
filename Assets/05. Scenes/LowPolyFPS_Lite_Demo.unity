@@ -9583,7 +9583,7 @@ MonoBehaviour:
   textAmmo: {fileID: 655960818}
   magazineUIPrefab: {fileID: 3251849094611264401, guid: 8bcf0ec3678c0ee4d82794783125fa02, type: 3}
   magazineParent: {fileID: 14852585}
-  maxMagazineCount: 0
+  maxMagazineCount: 8
   textHp: {fileID: 1391456101}
   imageBloodScreen: {fileID: 888145016}
   curveBloodScreen:
