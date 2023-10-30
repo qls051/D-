@@ -39,7 +39,7 @@ public class WeaponGrenadeProjectile : MonoBehaviour
             }
 
             // 폭발 범위에 부딪힌 오브젝트가 적 캐릭터일 때 처리
-            EnemyFSM enemy = hit.GetComponent<EnemyFSM>();
+            EnemyFSM enemy = hit.GetComponentInParent<EnemyFSM>();
             if(enemy != null)
             {
                 enemy.TakeDamage(explosionDamage);

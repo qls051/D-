@@ -78,7 +78,8 @@ public class WeaponGrenade : WeaponBase
         GameObject grenadeClone = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Random.rotation);
         grenadeClone.GetComponent<WeaponGrenadeProjectile>().Setup(weaponSetting.damage, transform.parent.forward);
 
-        weaponSetting.currentAmmo--;
+        weaponSetting.currentAmmo--; // 1¸¸ °¨¼Ò
         onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
     }
+
 }

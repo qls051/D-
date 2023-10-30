@@ -12371,7 +12371,7 @@ MonoBehaviour:
     curretMagazine: 0
     maxMagazine: 0
     currentAmmo: 2
-    maxAmmo: 0
+    maxAmmo: 2
     attackRate: 0
     attackDistance: 0
     isAutomaticAttack: 0
