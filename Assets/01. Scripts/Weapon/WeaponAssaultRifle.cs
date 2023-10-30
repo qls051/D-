@@ -252,11 +252,4 @@ public class WeaponAssaultRifle : WeaponBase
         }
     }
 
-    
-
-    public void IncreaseMagazine(int magazine)
-    {
-        weaponSetting.curretMagazine = CurrentMagazine + magazine > MaxMagazine ? MaxMagazine : CurrentMagazine + magazine;
-        onMagazineEvent.Invoke(CurrentMagazine);
-    }
 }
