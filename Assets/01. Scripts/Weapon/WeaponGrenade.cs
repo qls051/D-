@@ -82,4 +82,13 @@ public class WeaponGrenade : WeaponBase
         onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
     }
 
+    public override void IncreaseMagazine(int ammo)
+    {
+        // 수류탄은 탄창이 따로 없고, 탄수(Amoo)를 수류탄 개수로 사용하기 때문에 탄수를 증가시킨다
+        weaponSetting.currentAmmo = weaponSetting.currentAmmo + ammo > weaponSetting.maxAmmo ?
+                                    weaponSetting.maxAmmo : weaponSetting.currentAmmo + ammo;
+        onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+    }
+
+
 }

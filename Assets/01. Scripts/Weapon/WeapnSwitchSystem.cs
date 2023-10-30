@@ -83,6 +83,33 @@ public class WeapnSwitchSystem : MonoBehaviour
 
         // 현재 무기 활성화
         currentWeapon.gameObject.SetActive(true);
-
     }
+
+    ///<summary>
+    /// 첫번째 매개변수에 설정된 하나의 무기 탄창 수 증가
+    ///</summary>
+    public void IncreaseMagazine(WeaponType weaponType, int magazine)
+    {
+        // 해당 무기가 있는지 검사
+        if (weapons[(int)weaponType] != null)
+        {
+            // 해당 무기의 탄창 수를 magazine 만큼 증가
+            weapons[(int)weaponType].IncreaseMagazine(magazine);
+        }
+    }
+
+    ///<summary>
+    /// 소지 중인 모든 무기의 탄창 수가 증가
+    ///</summary>
+    public void IncreaseMagazine(int magazine)
+    {
+        for (int i = 0; i < weapons.Length; ++i)
+        {
+            if (weapons[i] != null)
+            {
+                weapons[i].IncreaseMagazine(magazine);
+            }
+        }
+    }
+
 }
