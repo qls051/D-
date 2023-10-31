@@ -7,7 +7,7 @@ public class Target : InteractionObject
 {
     [SerializeField] private AudioClip clipTargetUp;
     [SerializeField] private AudioClip clipTargetDown;
-    [SerializeField] private float targetUpDelayTime = 3;
+    [SerializeField] private float targetUpDelayTime;
 
     private AudioSource audioSource;
     private bool isPossibleHit = true;
