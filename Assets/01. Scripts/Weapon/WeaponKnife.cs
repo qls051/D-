@@ -47,7 +47,7 @@ public class WeaponKnife : WeaponBase
     public override void StopWeaponAction(int type = 0)
     {
         isAttack = false;
-        StartCoroutine("OnAttackLoop");
+        StartCoroutine(OnAttackLoop(type));
     }
 
     private IEnumerator OnAttackLoop(int type)

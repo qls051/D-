@@ -915,6 +915,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a44c1b62a8e13c840ab6e64b30c406e8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d1aed8ada79e4d4e99084037c3b094a, type: 3}
+--- !u!4 &158465686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400042, guid: 182b7f11db452bc458d35a6c9eced06f, type: 3}
+  m_PrefabInstance: {fileID: 1130940923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &160795963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7269,6 +7274,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 182b7f11db452bc458d35a6c9eced06f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 72800fa1a4d855843a4aea4073c9469d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182b7f11db452bc458d35a6c9eced06f, type: 3}
 --- !u!4 &1130940924 stripped
@@ -7310,6 +7319,36 @@ MonoBehaviour:
   onMagazineEvent:
     m_PersistentCalls:
       m_Calls: []
+  weaponKnifeCollider: {fileID: 1302535499}
+--- !u!114 &1130940927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130940925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e112bee7e3c724b9e8dfff2fdd101a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactPrefab:
+  - {fileID: 7012805532763948151, guid: e3d615d309d8fb543bebe1cfd7eab39f, type: 3}
+  - {fileID: 7012805532763948151, guid: 615513fc9c592fd4a8c7f9e6de047f94, type: 3}
+  - {fileID: 7012805532763948151, guid: 8d6952b3ffa1dde4899a8ffbc9cc429c, type: 3}
+  - {fileID: 7012805532763948151, guid: ba0be0f157a0d50419ace68ca3de063c, type: 3}
+--- !u!114 &1130940928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130940925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaed2de2ed4e02d49b96fc4b9056d813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136385240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8280,6 +8319,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4764293196696219720, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
   m_PrefabInstance: {fileID: 1296271820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302535497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302535498}
+  - component: {fileID: 1302535500}
+  - component: {fileID: 1302535499}
+  m_Layer: 0
+  m_Name: knifeCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302535498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302535497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: -0.5, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 158465686}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302535499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302535497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fabda028962dd46b00a49606a31047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactMemoryPool: {fileID: 1130940927}
+  knifeTransform: {fileID: 158465686}
+--- !u!135 &1302535500
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302535497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1308007780
 GameObject:
   m_ObjectHideFlags: 0
