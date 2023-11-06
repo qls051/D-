@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LodingSceneController : MonoBehaviour
+public class LoadingSceneController : MonoBehaviour
 {
     static string nextScene;
 
@@ -38,7 +38,7 @@ public class LodingSceneController : MonoBehaviour
             else
             {
                 timer += Time.unscaledDeltaTime;
-                progressBar.fillAmount = Mathf.Lerp(0.9f, 1f, timer);
+                progressBar.fillAmount = Mathf.Lerp(0.9f, 1f, timer/3f);
                 if(progressBar.fillAmount >= 1f)
                 {
                     op.allowSceneActivation = true;

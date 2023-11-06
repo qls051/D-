@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class SceneLoad : MonoBehaviour
 {
-    private void Update()
+    public void SceneLoadButton()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LodingSceneController.LoadScene("LowPolyFPS_Lite_Demo");
-        }
+        LoadingSceneController.LoadScene("GameMenu");
     }
 }
