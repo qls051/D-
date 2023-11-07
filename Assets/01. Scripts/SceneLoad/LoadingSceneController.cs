@@ -31,14 +31,14 @@ public class LoadingSceneController : MonoBehaviour
         {
             yield return null;
 
-            if(op.progress < 0.9f)
+            if(op.progress < 0.6f)
             {
                 progressBar.fillAmount = op.progress;
             }
             else
             {
                 timer += Time.unscaledDeltaTime;
-                progressBar.fillAmount = Mathf.Lerp(0.9f, 1f, timer/4f);
+                progressBar.fillAmount = Mathf.Lerp(0.6f, 1f, timer/4f);
                 if(progressBar.fillAmount >= 1f)
                 {
                     op.allowSceneActivation = true;
