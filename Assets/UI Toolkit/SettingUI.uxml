@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/02.%20Sprites/Image/SettingPanel.png?fileID=2800000&amp;guid=4e7e24c26da621c43a5916151446cb9d&amp;type=3#SettingPanel&apos;); border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-right-radius: 22px; border-bottom-left-radius: 22px; left: auto; top: auto; transition-timing-function: ease-in; width: 800px; height: 600px;">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 40px; height: 40px; background-image: url(&apos;project://database/Assets/02.%20Sprites/Image/SettingBtn.png?fileID=2800000&amp;guid=16d29ad02b2fe5345b01665735d1065a&amp;type=3#SettingBtn&apos;); background-color: rgba(84, 84, 84, 0); left: 93%; border-top-left-radius: 18px; border-top-right-radius: 18px; border-bottom-right-radius: 18px; border-bottom-left-radius: 18px; top: 5px; -unity-background-image-tint-color: rgb(255, 255, 255); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); transition-timing-function: ease-out-elastic; transition-duration: 0.5s;" />
+    </ui:VisualElement>
+</ui:UXML>
