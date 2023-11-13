@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using BackEnd;
 using System.Text.RegularExpressions;
-public class BackendNickName : MonoBehaviour
+using TMPro;
+
+public class Backnickname : MonoBehaviour
 {
-    [SerializeField] private InputField nickInput;
+    [SerializeField] private TMP_InputField nickInput;
 
     // 한글, 영어, 숫자만 입력 가능하게
     private bool CheekNickName()

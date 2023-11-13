@@ -6,13 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/05. Scenes/LoadingScene.unity
-    guid: 3456c5b9f54298e429693fadb6dc6054
-  - enabled: 1
     path: Assets/05. Scenes/GameMain.unity
     guid: 353cf6ccd007dc14b866af82ffb62d24
   - enabled: 1
-    path: Assets/05. Scenes/GameMenu.unity
+    path: Assets/05. Scenes/Lobby.unity
     guid: 6e11291eea2158348b7aaa98e2e0cc75
   - enabled: 1
     path: Assets/05. Scenes/LowPolyFPS_Lite_Demo.unity
