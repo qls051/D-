@@ -29,6 +29,6 @@ public class Logo : MonoBehaviour
 
     private void OnAfterProgress()
     {
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene("Lobby");
     }
 }
