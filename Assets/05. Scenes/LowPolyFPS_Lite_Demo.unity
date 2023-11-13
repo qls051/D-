@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 328659961}
   m_Layer: 0
   m_Name: CameraMap
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3002,6 +3002,10 @@ PrefabInstance:
       propertyPath: imageAim
       value: 
       objectReference: {fileID: 1150116140}
+    - target: {fileID: 1169543255, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 951
+      objectReference: {fileID: 0}
     - target: {fileID: 1788353133, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7742,7 +7746,7 @@ GameObject:
   - component: {fileID: 1136385245}
   m_Layer: 0
   m_Name: Camera1
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8117,7 +8121,7 @@ GameObject:
   - component: {fileID: 1168297551}
   m_Layer: 0
   m_Name: Camera2
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9530,7 +9534,7 @@ GameObject:
   - component: {fileID: 1451616539}
   m_Layer: 0
   m_Name: Camera4
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13501,7 +13505,7 @@ GameObject:
   - component: {fileID: 2084033874}
   m_Layer: 0
   m_Name: Camera3
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

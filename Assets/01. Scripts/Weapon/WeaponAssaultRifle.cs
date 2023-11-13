@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class WeaponAssaultRifle : WeaponBase
 {
+    [SerializeField] private LayerMask _layerMask;
     [Header("Audio Clips")]
     [SerializeField] private AudioClip audioClipTakeOutWeapon;  // 무기 장착 사운드
     [SerializeField] private AudioClip audioClipFire; // 공격 사운드
@@ -155,16 +156,20 @@ public class WeaponAssaultRifle : WeaponBase
         Vector3 targetPoint = Vector3.zero;
 
         // 화면 중앙 표시 (Aim 기준으로 Raycast연산)
-        ray = mainCamara.ViewportPointToRay(Vector2.one * 0.5f);
+        ray = new Ray(mainCamara.transform.position,mainCamara.transform.forward);
         // 공격 사거리(attackDistance) 안에 부딪히는 오브젝트가 있으면 targetPoint는 광선에 부딪힌 위치
-        if(Physics.Raycast(ray,out hit, weaponSetting.attackDistance))
+        if(Physics.Raycast(ray,out hit, weaponSetting.attackDistance, _layerMask))
         {
+            Debug.Log($"Origin: {ray}");
+            Debug.Log(hit.point);
             targetPoint = hit.point;
         }
         // 공격 사거리 안에 부딪히는 오브젝트가 없으면 targetPoint는 최대 사거리 위치
         else
         {
+
             targetPoint = ray.origin + ray.direction * weaponSetting.attackDistance;
+            Debug.LogError(targetPoint);
         }
         Debug.DrawRay(ray.origin, ray.direction * weaponSetting.attackDistance, Color.red);
 
