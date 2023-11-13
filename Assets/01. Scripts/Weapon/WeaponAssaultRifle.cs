@@ -160,16 +160,12 @@ public class WeaponAssaultRifle : WeaponBase
         // 공격 사거리(attackDistance) 안에 부딪히는 오브젝트가 있으면 targetPoint는 광선에 부딪힌 위치
         if(Physics.Raycast(ray,out hit, weaponSetting.attackDistance, _layerMask))
         {
-            Debug.Log($"Origin: {ray}");
-            Debug.Log(hit.point);
             targetPoint = hit.point;
         }
         // 공격 사거리 안에 부딪히는 오브젝트가 없으면 targetPoint는 최대 사거리 위치
         else
         {
-
             targetPoint = ray.origin + ray.direction * weaponSetting.attackDistance;
-            Debug.LogError(targetPoint);
         }
         Debug.DrawRay(ray.origin, ray.direction * weaponSetting.attackDistance, Color.red);
 
