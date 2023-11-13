@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class LoginBase : MonoBehaviour
 {
-    [SerializeField] private Text textMassage;   
+    [SerializeField] private Text textMessage;   
 
     /// <summary>
     ///  메시지 내용, InputField 색상 초기화
@@ -11,7 +11,7 @@ public class LoginBase : MonoBehaviour
     /// <param name="images"></param>
     protected void ResetUI(params Image[] images)
     {
-        textMassage.text = string.Empty;
+        textMessage.text = string.Empty;
 
         for(int  i = 0; i < images.Length; ++i)
         {
@@ -24,7 +24,7 @@ public class LoginBase : MonoBehaviour
     /// <param name="msg"></param>
     protected void SetMessage(string msg)
     {
-        textMassage.text = msg;
+        textMessage.text = msg;
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public class LoginBase : MonoBehaviour
     /// <param name="msg"></param>
     protected void GuideForIncorrectlyEnteredData(Image image, string msg)
     {
-        textMassage.text = msg;
+        textMessage.text = msg;
         image.color = Color.red;
     }
 
