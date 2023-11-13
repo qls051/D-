@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Logo : MonoBehaviour
 {
     [SerializeField] private Progress progress;
-
+    [SerializeField] private SceneNames nextScene;
     private void Awake()
     {
         SystemSetup();   
@@ -29,6 +29,6 @@ public class Logo : MonoBehaviour
 
     private void OnAfterProgress()
     {
-        SceneManager.LoadScene("Login");
+        Utils.LoadScene(nextScene);
     }
 }
