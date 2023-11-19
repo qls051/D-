@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Launcher : MonoBehaviourPunCallbacks
 {
     [SerializeField] InputField roomNameInputField;
+    [SerializeField] Text errorText;
     private void Start()
     {
         Debug.Log("Conneting to Master");
@@ -37,11 +38,13 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        
+        MenuManager.Instance.OpenMenu("room");
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        
+        errorText.text = "Room Creation Failed:" + message;
+        MenuManager.Instance.OpenMenu("error");
     }
+
 }
