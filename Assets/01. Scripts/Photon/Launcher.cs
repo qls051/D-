@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
+
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    [SerializeField] InputField roomNameInputField;
     private void Start()
     {
         Debug.Log("Conneting to Master");
@@ -20,5 +23,25 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         MenuManager.Instance.OpenMenu("title");
         Debug.Log("Joined Lobby");
+    }
+
+    public void CreatRoom()
+    {
+        if (string.IsNullOrEmpty(roomNameInputField.text))
+        {
+            return;
+        }
+        PhotonNetwork.CreateRoom(roomNameInputField.text);
+        MenuManager.Instance.OpenMenu("loading");
+    }
+
+    public override void OnJoinedRoom()
+    {
+        
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        
     }
 }
