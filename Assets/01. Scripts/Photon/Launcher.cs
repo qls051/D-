@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using Photon.Realtime;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
     [SerializeField] InputField roomNameInputField;
     [SerializeField] Text errorText;
     [SerializeField] Text roomNameText;
+    [SerializeField] Transform roomListContant;
+    [SerializeField] GameObject roomListItemPrefab;
     private void Start()
     {
         Debug.Log("Conneting to Master");
@@ -58,5 +61,10 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         MenuManager.Instance.OpenMenu("title");
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        
     }
 }
