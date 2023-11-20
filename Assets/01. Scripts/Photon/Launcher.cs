@@ -65,6 +65,13 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
-        
+        foreach(Transform trans in roomListContant)
+        {
+            Destroy(trans.gameObject);
+        }
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            Instantiate(roomListItemPrefab, roomListContant).GetComponent<RoomListItem>().Setup(roomList[i]);
+        }
     }
 }
