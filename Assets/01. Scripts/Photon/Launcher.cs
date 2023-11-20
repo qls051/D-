@@ -7,11 +7,18 @@ using Photon.Realtime;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    public static Launcher Instance;
+
     [SerializeField] InputField roomNameInputField;
     [SerializeField] Text errorText;
     [SerializeField] Text roomNameText;
     [SerializeField] Transform roomListContant;
     [SerializeField] GameObject roomListItemPrefab;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         Debug.Log("Conneting to Master");
@@ -56,6 +63,12 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("loading");  
+    }
+
+    public void JoinRoom(RoomInfo info)
+    {
+        PhotonNetwork.JoinRoom(info.Name);
+        MenuManager.Instance.OpenMenu("loading");
     }
 
     public override void OnLeftRoom()
