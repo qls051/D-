@@ -29,6 +29,7 @@ public class Logo : MonoBehaviour
 
     private void OnAfterProgress()
     {
-        Utils.LoadScene(nextScene);
+        //Utils.LoadScene(nextScene);
+        SceneManager.LoadScene("Lobby");
     }
 }
