@@ -32,6 +32,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to Master");
         PhotonNetwork.JoinLobby();
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public override void OnJoinedLobby()
@@ -68,6 +69,11 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         errorText.text = "Room Creation Failed:" + message;
         MenuManager.Instance.OpenMenu("error");
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(2); // 빌드 세팅에 씬 넣을떄 인덱스 숫자 그거 임 
     }
 
     public void LeaveRoom()
