@@ -85,8 +85,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
 
     public void StartGame()
-    {
-        PhotonNetwork.LoadLevel(2); // 빌드 세팅에 씬 넣을떄 인덱스 숫자 그거 임 
+    { 
+        PhotonNetwork.LoadLevel(1); // 빌드 세팅에 씬 넣을떄 인덱스 숫자 그거 임 최종 빌드할땐 2로 바꾸기 
     }
 
     public void LeaveRoom()

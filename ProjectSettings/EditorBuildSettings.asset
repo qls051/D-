@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/05. Scenes/Lobby.unity
     guid: 6e11291eea2158348b7aaa98e2e0cc75
-  - enabled: 0
+  - enabled: 1
     path: Assets/05. Scenes/LowPolyFPS_Lite_Demo.unity
     guid: 130de191e9bf7de41a659f68e5741ed0
   m_configObjects: {}
