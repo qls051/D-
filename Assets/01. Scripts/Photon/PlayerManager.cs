@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
-
+//using System.Net.NetworkInformation;
+//using System.Runtime.InteropServices;
+using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView PV;
@@ -24,6 +24,7 @@ public class PlayerManager : MonoBehaviour
 
     private void CreateController()
     {
-        Debug.Log("Instanitiated Player Controller");
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
+
     }
 }
