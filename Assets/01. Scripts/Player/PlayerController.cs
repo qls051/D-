@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private MovementCharacterController movement; // 키보드 입력으로 플레이어 이동
     private Status status; // 이동속도 등 플레이어 정보
 
+    PhotonView PV;
+
     private void Awake()
     {
         //마우스 커서 안 보이게 설정하고 현재 위치에 고정
@@ -31,10 +34,14 @@ public class PlayerController : MonoBehaviour
         movement= GetComponent<MovementCharacterController>();
         audioSource = GetComponent<AudioSource>();
         status = GetComponent<Status>();
+
+        PV = GetComponent<PhotonView>();
     }
 
     void Update()
     {
+        if (!PV.IsMine) return;
+
         UpdateRotate();
         UpdateMove();
         UPdateWeaponAction();
