@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     PhotonView PV;
 
-    
+    PlayerManager playerManager;
 
     private void Awake()
     {
@@ -38,16 +38,20 @@ public class PlayerController : MonoBehaviour
         status = GetComponent<Status>();
 
         PV = GetComponent<PhotonView>();
+
+       playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>(); 
     }
 
     void Update()
     {
-        if (!PV.IsMine) return;
 
         UpdateRotate();
         UpdateMove();
         UPdateWeaponAction();
         UpdateJump();
+
+        if (!PV.IsMine) return;
+
     }
 
     private void UpdateRotate()
@@ -155,8 +159,13 @@ public class PlayerController : MonoBehaviour
 
         if (isDie == true)
         {
-            Debug.Log("Game Over");
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        playerManager.Die();
     }
 }
  
