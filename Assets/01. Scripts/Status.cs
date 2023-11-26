@@ -21,19 +21,19 @@ public class Status : MonoBehaviour
     public float WalkSpeed => walkSpeed;
     public float RunSpeed => runSpeed;
 
-    public int CurrentHP => currentHP;
-    public int MaxHP => maxHP;
+    public float CurrentHP => currentHP;
+    public float MaxHP => maxHP;
 
     private void Awake()
     {
         currentHP = maxHP;
     }
 
-    public bool DecreasHP(int damage)
+    public bool DecreasHP(float damage)
     {
         int perviousHP = currentHP;
 
-        currentHP = currentHP - damage > 0 ? currentHP - damage : 0;
+        currentHP = (int)(currentHP - damage > 0 ? currentHP - damage : 0);
 
         onHPEvent.Invoke(perviousHP, currentHP);
 

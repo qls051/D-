@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     PhotonView PV;
 
+    
+
     private void Awake()
     {
         //마우스 커서 안 보이게 설정하고 현재 위치에 고정
@@ -126,7 +128,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    /*public void TakeDamage(int damage)
     {
         bool isDie = status.DecreasHP(damage);
 
@@ -134,7 +136,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game Over"); 
         }
-    }
+    }*/
     public void SwitchingWeapon(WeaponBase newWeapon)
     {
         weapon = newWeapon;
@@ -149,7 +151,12 @@ public class PlayerController : MonoBehaviour
     {
         if (!PV.IsMine) return;
 
-        Debug.Log("Took damage:" + damage);
+        bool isDie = status.DecreasHP(damage);
+
+        if (isDie == true)
+        {
+            Debug.Log("Game Over");
+        }
     }
 }
  
