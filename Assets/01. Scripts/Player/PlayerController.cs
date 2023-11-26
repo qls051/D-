@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode keyCodeJump = KeyCode.Space; // 점프 키
     [SerializeField] private KeyCode keyCodeReload = KeyCode.R; // 재장전 키
 
-    //public float Movespeed = 7f;
-    private AudioSource audioSource;
+    public float Movespeed = 7f; // 원래 주석 달려있었음
+    private AudioSource audioSource; 
     private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
     private RotateToMouse rotateToMouse; // 마우스 이동으로 카메라 회전
     private MovementCharacterController movement; // 키보드 입력으로 플레이어 이동
@@ -135,10 +135,21 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over"); 
         }
     }
-
     public void SwitchingWeapon(WeaponBase newWeapon)
     {
         weapon = newWeapon;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+    }
+    [PunRPC]
+    void RPC_TakeDamage(float damage)
+    {
+        if (!PV.IsMine) return;
+
+        Debug.Log("Took damage:" + damage);
     }
 }
  

@@ -253,6 +253,7 @@ MonoBehaviour:
   keyCodeRun: 304
   keyCodeJump: 32
   keyCodeReload: 114
+  Movespeed: 5
 --- !u!82 &4266303797519858082
 AudioSource:
   m_ObjectHideFlags: 0
