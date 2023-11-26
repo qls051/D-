@@ -5,7 +5,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class HPEvent : UnityEngine.Events.UnityEvent<int, int> { }
-public class Status : MonoBehaviour
+public  class Status : MonoBehaviour
 {
     [HideInInspector]
     public HPEvent onHPEvent = new HPEvent();

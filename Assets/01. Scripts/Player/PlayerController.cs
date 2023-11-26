@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         movement= GetComponent<MovementCharacterController>();
         audioSource = GetComponent<AudioSource>();
         status = GetComponent<Status>();
+        weapon = GetComponent<WeaponBase>(); // 게임 시작하면 널 레퍼 나서 추가한 코드
 
         PV = GetComponent<PhotonView>();
 
