@@ -15,6 +15,19 @@ public class WeapnSwitchSystem : MonoBehaviour
 
     private void Awake()
     {
+        // PlayerHUD가 있는 GameObject를 찾아서 할당
+        GameObject playerHUDObject = GameObject.Find("PlayerHUD"); // 여기에 실제 오브젝트의 이름을 넣어야 합니다.
+
+        if (playerHUDObject != null)
+        {
+            // PlayerHUD 스크립트를 가져와서 할당
+            playerHUD = playerHUDObject.GetComponent<PlayerHUD>();
+        }
+        else
+        {
+            Debug.LogError("PlayerHUD GameObject를 찾을 수 없습니다.");
+        }
+
         // 무기 정보 출력을 위해 현재 소지중인 모든 무기 이벤트 등록
         playerHUD.SetupAllWeapons(weapons);
 
