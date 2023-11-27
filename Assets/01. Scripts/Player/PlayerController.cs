@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         PV = GetComponent<PhotonView>();
 
-       playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>(); 
+        playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>(); 
     }
 
     void Update()
